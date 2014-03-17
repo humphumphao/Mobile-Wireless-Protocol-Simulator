@@ -17,7 +17,7 @@ var protocolIdentity = document.getElementById("protocolIdentity").value;
 		saveNetworkTopology();
 		document.getElementById("SR1").disabled = true;
 		document.getElementById("TL").disabled = true;
-		document.getElementById("routingNumber").disabled = false;
+		document.getElementById("routingNumber").disabled = true;
 		message.value="Click on 'Show Path' to proceed";
 	}
 }
