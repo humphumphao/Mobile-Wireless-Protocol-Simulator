@@ -67,7 +67,7 @@ function routeRREQPath(){
 		y1 = parseInt(dsdvArray[i][6]);
 		x2 = parseInt(dsdvArray[i][7]);
 		y2 = parseInt(dsdvArray[i][8]);
-		arrow(x1,y1,x2,y2,2);
+		arrow(x1,y1,x2,y2,1);
 	}
 	
 	messageTimeLine.value="Blue Arrow --> RREQ\nOrange Arrow --> RREP";
