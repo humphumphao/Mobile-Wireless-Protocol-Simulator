@@ -70,7 +70,7 @@ function routeRREQPath(){
 		arrow(x1,y1,x2,y2,2);
 	}
 	
-	messageTimeLine.value="Red Arrow --> RREQ\nBlue Arrow --> RREP";
+	messageTimeLine.value="Blue Arrow --> RREQ\nOrange Arrow --> RREP";
 
 }
 

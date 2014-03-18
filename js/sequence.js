@@ -139,16 +139,16 @@ var temp;
 					y3 = y3 + 20;
 					x4 = x4 + 75;
 					y4 = y4 + 20;
-					arrowTimeLine(x3,y3,x4,y4,2);
+					arrowTimeLine(x3,y3,x4,y4,1);
 					
 					x5 = x5 - 75;
 					y5 = y5 + 20;
 					x6 = x6 - 75;
 					y6 = y6 + 20;
-					arrowTimeLine(x5,y5,x6,y6,2);
+					arrowTimeLine(x5,y5,x6,y6,1);
 				}
 
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nBoth RREQ Packets reached next intermediate node." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nBoth RREQ Packets reached next intermediate node." 
 		}
 		else if(sequenceCount == temp && sequenceCount < timeLineNode[1]){ 
 
@@ -158,16 +158,16 @@ var temp;
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			for(var i=0;i<temp;i++){
 				x5 = x5 - 75;
 				y5 = y5 + 20;
 				x6 = x6 - 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x5,y5,x6,y6,2);
+				arrowTimeLine(x5,y5,x6,y6,1);
 			}
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached destination node. Sending RREP back \n\nOn the other hand, the other RREQ reached next intermediate node instead of destination node." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached destination node. Sending RREP back \n\nOn the other hand, the other RREQ reached next intermediate node instead of destination node." 
 		}
 		
 		else if(sequenceCount > temp && sequenceCount < timeLineNode[1]){ 
@@ -178,22 +178,22 @@ var temp;
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			for(var i=0;i<temp;i++){
 				x5 = x5 - 75;
 				y5 = y5 + 20;
 				x6 = x6 - 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x5,y5,x6,y6,2);
+				arrowTimeLine(x5,y5,x6,y6,1);
 			}
 			if(sequenceCount >= temp2){
 				var x=temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet. \nOn the other hand, the other RREQ packet reached destination node." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet. \nOn the other hand, the other RREQ packet reached destination node." 
 			}
 			else{
 				var x = sequenceCount - temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node. \nOn the other hand, the other RREQ packet reached destination node." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node. \nOn the other hand, the other RREQ packet reached destination node." 
 			}
 			x5 = x5 - 75;
 			x6 = x6 - 75;
@@ -203,7 +203,7 @@ var temp;
 				y5 = y5 + 20;
 				x6 = x6 + 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x6,y5,x5,y6,1);
+				arrowTimeLine(x6,y5,x5,y6,0);
 			}
 			
 			//messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet. \n\nOn the other hand, the other RREQ reached next intermediate node instead of destination node." 
@@ -217,23 +217,23 @@ var temp;
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			for(var i=0;i<temp;i++){
 				x5 = x5 - 75;
 				y5 = y5 + 20;
 				x6 = x6 - 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x5,y5,x6,y6,2);
+				arrowTimeLine(x5,y5,x6,y6,1);
 			}
 			if(sequenceCount >= temp2){
 				var x=temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet. \nOn the other hand, the other RREQ packet reached destination node." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet. \nOn the other hand, the other RREQ packet reached destination node." 
 				sequenceCount--;
 			}
 			else{
 				var x = sequenceCount - temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node. \nOn the other hand, the other RREQ packet reached destination node." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node. \nOn the other hand, the other RREQ packet reached destination node." 
 			}
 			x5 = x5 - 75;
 			x6 = x6 - 75;
@@ -242,7 +242,7 @@ var temp;
 				y5 = y5 + 20;
 				x6 = x6 + 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x6,y5,x5,y6,1);
+				arrowTimeLine(x6,y5,x5,y6,0);
 			}
 			
 			//messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": RREP packet going back to source node through the same path taken by the RREQ packet. \nOn the other hand, the other RREQ packet reached destination node." 
@@ -256,14 +256,14 @@ var temp;
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			for(var i=0;i<temp;i++){
 				x5 = x5 - 75;
 				y5 = y5 + 20;
 				x6 = x6 - 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x5,y5,x6,y6,2);
+				arrowTimeLine(x5,y5,x6,y6,1);
 			}
 			x5 = x5 - 75;
 			x6 = x6 - 75;
@@ -272,10 +272,10 @@ var temp;
 				y5 = y5 + 20;
 				x6 = x6 + 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x6,y5,x5,y6,1);
+				arrowTimeLine(x6,y5,x5,y6,0);
 			}
 			
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node. \nOn the other hand, the other RREQ packet reached destination node." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node. \nOn the other hand, the other RREQ packet reached destination node." 
 		}
 		
 	}
@@ -290,11 +290,11 @@ var temp;
 					y3 = y3 + 20;
 					x4 = x4 + 75;
 					y4 = y4 + 20;
-					arrowTimeLine(x3,y3,x4,y4,2);
+					arrowTimeLine(x3,y3,x4,y4,1);
 					
 				}
 
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached next intermediate node." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached next intermediate node." 
 		}
 		
 		else if(sequenceCount == temp){ 
@@ -305,10 +305,10 @@ var temp;
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached destination node. Sending RREP back." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached destination node. Sending RREP back." 
 		}
 		
 		else if(sequenceCount > temp){ 
@@ -319,18 +319,18 @@ var temp;
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			
 			if(sequenceCount >= temp2){
 
 				var x=temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet." 
 				sequenceCount--;
 			}
 			else{
 				var x = sequenceCount - temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node." 
 			}
 			x3 = x3 + 75;
 			x4 = x4 + 75;
@@ -340,7 +340,7 @@ var temp;
 				y3 = y3 + 20;
 				x4 = x4 - 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x4,y3,x3,y4,1);
+				arrowTimeLine(x4,y3,x3,y4,0);
 			}
 		
 		}
@@ -386,7 +386,7 @@ function sequenceBackwardDsr(){
 	if(timeLineNode.length>1){
 		
 		if(sequenceCount<=0){ 
-		messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nBoth RREQ packets at source node."
+		messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nBoth RREQ packets at source node."
 		sequenceCount++;
 		}
 		
@@ -398,16 +398,16 @@ function sequenceBackwardDsr(){
 					y3 = y3 + 20;
 					x4 = x4 + 75;
 					y4 = y4 + 20;
-					arrowTimeLine(x3,y3,x4,y4,2);
+					arrowTimeLine(x3,y3,x4,y4,1);
 					
 					x5 = x5 - 75;
 					y5 = y5 + 20;
 					x6 = x6 - 75;
 					y6 = y6 + 20;
-					arrowTimeLine(x5,y5,x6,y6,2);
+					arrowTimeLine(x5,y5,x6,y6,1);
 				}
 
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nBoth RREQ Packets reached next intermediate node." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nBoth RREQ Packets reached next intermediate node." 
 		}
 		else if(sequenceCount == temp && sequenceCount < timeLineNode[1]){ 
 
@@ -417,16 +417,16 @@ function sequenceBackwardDsr(){
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			for(var i=0;i<temp;i++){
 				x5 = x5 - 75;
 				y5 = y5 + 20;
 				x6 = x6 - 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x5,y5,x6,y6,2);
+				arrowTimeLine(x5,y5,x6,y6,1);
 			}
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached destination node. Sending RREP back \n\nOn the other hand, the other RREQ reached next intermediate node instead of destination node." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached destination node. Sending RREP back \n\nOn the other hand, the other RREQ reached next intermediate node instead of destination node." 
 		}
 		
 		else if(sequenceCount > temp && sequenceCount < timeLineNode[1]){ 
@@ -437,14 +437,14 @@ function sequenceBackwardDsr(){
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			for(var i=0;i<temp;i++){
 				x5 = x5 - 75;
 				y5 = y5 + 20;
 				x6 = x6 - 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x5,y5,x6,y6,2);
+				arrowTimeLine(x5,y5,x6,y6,1);
 			}
 			x5 = x5 - 75;
 			x6 = x6 - 75;
@@ -454,10 +454,10 @@ function sequenceBackwardDsr(){
 				y5 = y5 + 20;
 				x6 = x6 + 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x6,y5,x5,y6,1);
+				arrowTimeLine(x6,y5,x5,y6,0);
 			}
 			
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet. \n\nOn the other hand, the other RREQ reached next intermediate node instead of destination node." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet. \n\nOn the other hand, the other RREQ reached next intermediate node instead of destination node." 
 		}
 		
 		else if(sequenceCount > temp && sequenceCount >= timeLineNode[1]){ 
@@ -468,22 +468,22 @@ function sequenceBackwardDsr(){
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			for(var i=0;i<temp;i++){
 				x5 = x5 - 75;
 				y5 = y5 + 20;
 				x6 = x6 - 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x5,y5,x6,y6,2);
+				arrowTimeLine(x5,y5,x6,y6,1);
 			}
 			if(sequenceCount >= temp2){
 				var x=temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet. \nOn the other hand, the other RREQ packet reached destination node." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet. \nOn the other hand, the other RREQ packet reached destination node." 
 			}
 			else{
 				var x = sequenceCount - temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node. \nOn the other hand, the other RREQ packet reached destination node." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node. \nOn the other hand, the other RREQ packet reached destination node." 
 			}
 			x5 = x5 - 75;
 			x6 = x6 - 75;
@@ -492,7 +492,7 @@ function sequenceBackwardDsr(){
 				y5 = y5 + 20;
 				x6 = x6 + 75;
 				y6 = y6 + 20;
-				arrowTimeLine(x6,y5,x5,y6,1);
+				arrowTimeLine(x6,y5,x5,y6,0);
 			}
 			
 			//messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": RREP packet going back to source node through the same path taken by the RREQ packet. \nOn the other hand, the other RREQ packet reached destination node." 
@@ -503,7 +503,7 @@ function sequenceBackwardDsr(){
 	else{
 	
 		if(sequenceCount <=0){
-		messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ packet at source node."
+		messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ packet at source node."
 		sequenceCount++;
 		}
 	
@@ -515,11 +515,11 @@ function sequenceBackwardDsr(){
 					y3 = y3 + 20;
 					x4 = x4 + 75;
 					y4 = y4 + 20;
-					arrowTimeLine(x3,y3,x4,y4,2);
+					arrowTimeLine(x3,y3,x4,y4,1);
 					
 				}
 
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached next intermediate node." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached next intermediate node." 
 		}
 		
 		else if(sequenceCount == temp){ 
@@ -530,10 +530,10 @@ function sequenceBackwardDsr(){
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			
-			messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached destination node. Sending RREP back." 
+			messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREQ Packet reached destination node. Sending RREP back." 
 		}
 		
 		else if(sequenceCount > temp){ 
@@ -544,16 +544,16 @@ function sequenceBackwardDsr(){
 				y3 = y3 + 20;
 				x4 = x4 + 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x3,y3,x4,y4,2);
+				arrowTimeLine(x3,y3,x4,y4,1);
 			}
 			
 			if(sequenceCount >= temp2){
 				var x=temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet going back to source node through the same path taken by the RREQ packet." 
 			}
 			else{
 				var x = sequenceCount - temp;
-				messageTimeLine.value="Red arrows display the path of RREQ packet.\n\nBlue arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node." 
+				messageTimeLine.value="Blue arrows display the path of RREQ packet.\n\nOrange arrows display the path of RREP packet.\n\nTime = " + sequenceCount + ": \nRREP packet reached back to the source node." 
 			}
 			x3 = x3 + 75;
 			x4 = x4 + 75;
@@ -563,7 +563,7 @@ function sequenceBackwardDsr(){
 				y3 = y3 + 20;
 				x4 = x4 - 75;
 				y4 = y4 + 20;
-				arrowTimeLine(x4,y3,x3,y4,1);
+				arrowTimeLine(x4,y3,x3,y4,0);
 			}
 		
 		}
