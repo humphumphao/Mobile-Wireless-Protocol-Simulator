@@ -123,3 +123,66 @@ function createNode(xCoord,yCoord,text){
 
 }
 
+function drawingNormal(){
+
+arrow(10, 175, 69, 175, 2);
+		
+context.fillStyle = "black";
+var font = "bold 12px serif";
+context.font = font;
+context.fillText("Selected", 75, 170);
+
+context.fillStyle = "green";
+context.beginPath();
+var radius = 10; // for example
+context.arc(20, 120, radius, 0, Math.PI * 2);
+context.closePath();
+context.fill();
+context.fillStyle = "red";
+context.beginPath();
+var radius = 10; // for example
+context.arc(20, 150, radius, 0, Math.PI * 2);
+context.closePath();
+context.fill();
+
+context.fillStyle = "black";
+var font = "bold 12px serif";
+context.font = font;
+context.fillText("Source Node", 40,110);
+
+var font = "bold 12px serif";
+context.font = font;
+context.fillText("Destination Node", 40,143);
+}
+
+function drawingNormal2(){
+
+arrow(10, 175, 69, 175, 1);
+		
+context.fillStyle = "black";
+var font = "bold 12px serif";
+context.font = font;
+context.fillText("RREQ", 75, 170);
+
+context.fillStyle = "green";
+context.beginPath();
+var radius = 10; // for example
+context.arc(20, 120, radius, 0, Math.PI * 2);
+context.closePath();
+context.fill();
+context.fillStyle = "red";
+context.beginPath();
+var radius = 10; // for example
+context.arc(20, 150, radius, 0, Math.PI * 2);
+context.closePath();
+context.fill();
+
+context.fillStyle = "black";
+var font = "bold 12px serif";
+context.font = font;
+context.fillText("Source Node", 40,110);
+
+var font = "bold 12px serif";
+context.font = font;
+context.fillText("Destination Node", 40,143);
+}
