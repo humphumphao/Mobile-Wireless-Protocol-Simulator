@@ -7,10 +7,10 @@ var message=document.getElementById("message");
 
 var protocolIdentity = document.getElementById("protocolIdentity").value;
 	if(protocolIdentity=="dsdv"){
-		function drawingNormal();
+		drawingNormal();
 	}
 	else if(protocolIdentity=="dsr"){
-		function drawingNormal2();
+		drawingNormal2();
 	}
 
 if(nodeNum==0){
