@@ -4,15 +4,7 @@ var c=document.getElementById("myCanvas");
 var context=c.getContext("2d");
 var nodeNum=document.getElementById("nodeNum").value;
 var message=document.getElementById("message");
-
-var protocolIdentity = document.getElementById("protocolIdentity").value;
-	if(protocolIdentity=="dsdv"){
-		drawingNormal();
-	}
-	else if(protocolIdentity=="dsr"){
-		drawingNormal2();
-	}
-
+drawingNormal();
 if(nodeNum==0){
 	message.value = "Select node number to remove a intermediate node. \nS1 -> remove source node \nR1 -> remove destination node."
 

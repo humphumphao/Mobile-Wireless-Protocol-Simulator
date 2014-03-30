@@ -1,6 +1,6 @@
 function saveNetworkTopology(){
 
-		if(sendersArray.length>0){
+	if(sendersArray.length>0){
 
 		var text = "S1";
 		context.fillStyle = "green";
@@ -15,24 +15,6 @@ function saveNetworkTopology(){
 		context.fillText(text, sendersArray[0][2]-radius/4 ,sendersArray[0][3]-radius/2);
 		
 		saveSourceNode();
-	
-	}
-	
-	if(receiversArray.length>0){
-	
-		var text = "R1";
-		context.fillStyle = "red";
-		context.beginPath();
-		var radius = 20; // for example
-		context.arc(receiversArray[0][2], receiversArray[0][3], radius, 0, Math.PI * 2);
-		context.closePath();
-		context.fill();
-		context.fillStyle = "black";
-		context.font = "20px Georgia";
-		context.textBaseline = "top";
-		context.fillText(text, receiversArray[0][2]-radius/4 ,receiversArray[0][3]-radius/2);
-		
-		saveDestinationNode();
 	
 	}
 	
@@ -56,6 +38,24 @@ function saveNetworkTopology(){
 			saveIntermediateNode(text);
 		
 		}
+	}
+	
+	if(receiversArray.length>0){
+	
+		var text = "R1";
+		context.fillStyle = "red";
+		context.beginPath();
+		var radius = 20; // for example
+		context.arc(receiversArray[0][2], receiversArray[0][3], radius, 0, Math.PI * 2);
+		context.closePath();
+		context.fill();
+		context.fillStyle = "black";
+		context.font = "20px Georgia";
+		context.textBaseline = "top";
+		context.fillText(text, receiversArray[0][2]-radius/4 ,receiversArray[0][3]-radius/2);
+		
+		saveDestinationNode();
+	
 	}
 
 }

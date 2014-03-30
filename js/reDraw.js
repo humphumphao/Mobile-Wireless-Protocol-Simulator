@@ -17,24 +17,7 @@ function reDraw(){
 		compareSourceNode();
 	
 	}
-	
-	if(receiversArray.length>0){
-	
-		var text = "R1";
-		context.fillStyle = "red";
-		context.beginPath();
-		var radius = 20; // for example
-		context.arc(receiversArray[0][2], receiversArray[0][3], radius, 0, Math.PI * 2);
-		context.closePath();
-		context.fill();
-		context.fillStyle = "black";
-		context.font = "20px Georgia";
-		context.textBaseline = "top";
-		context.fillText(text, receiversArray[0][2]-radius/4 ,receiversArray[0][3]-radius/2);
-		
-		compareDestinationNode();
-	
-	}
+	checkNodeTableArray();
 	
 	if(normalArray.length>0){
 	
@@ -57,5 +40,26 @@ function reDraw(){
 		
 		}
 	}
-
+	checkNodeTableArray();
+	
+	if(receiversArray.length>0){
+	
+		var text = "R1";
+		context.fillStyle = "red";
+		context.beginPath();
+		var radius = 20; // for example
+		context.arc(receiversArray[0][2], receiversArray[0][3], radius, 0, Math.PI * 2);
+		context.closePath();
+		context.fill();
+		context.fillStyle = "black";
+		context.font = "20px Georgia";
+		context.textBaseline = "top";
+		context.fillText(text, receiversArray[0][2]-radius/4 ,receiversArray[0][3]-radius/2);
+		
+		compareDestinationNode();
+	
+	}
+	
+	checkNodeTableArray();
+	
 }

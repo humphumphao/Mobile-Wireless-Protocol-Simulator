@@ -158,11 +158,17 @@ context.fillText("Destination Node", 40,143);
 function drawingNormal2(){
 
 arrow(10, 175, 69, 175, 1);
+arrow(10, 215, 69, 215, 0);
 		
 context.fillStyle = "black";
 var font = "bold 12px serif";
 context.font = font;
 context.fillText("RREQ", 75, 170);
+
+context.fillStyle = "black";
+var font = "bold 12px serif";
+context.font = font;
+context.fillText("RREP", 75, 210);
 
 context.fillStyle = "green";
 context.beginPath();

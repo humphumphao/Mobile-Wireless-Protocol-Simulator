@@ -1,5 +1,8 @@
 function addLine(x1,x2,y1,y2){
-
+	
+	components=[x1,y1,x2,y2];
+	dsrLine.push(components);
+	
 	context.beginPath();
 	context.strokeStyle = '#000000'
 	context.lineWidth=1;

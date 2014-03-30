@@ -2,7 +2,7 @@ function showTimeLineDsDv(){
 	var a = 0;
 	var c = 0;
 	var b = 20;
-	checkDsdvArrayPath();
+	//checkDsdvArrayPath();
 	for(var i = 0;i<dsdvArray.length;i++){
 		if(a<800){
 			a = a + 75; 
@@ -16,17 +16,16 @@ function showTimeLineDsDv(){
 }
 
 function showTimeLineDsr(){
-	var a = 400;
+	var a = 75;
 	var c = 0;
 	var b = 20;
 	var d = 0;
 	var createdNode = 0;
 	var have = 0;
 
-	checkDsdvArrayPath();
 	createNode(a,20,"S1");
 	var showNode = new Array();
-	for(var i = 0;i<dsdvArray.length;i++){
+	for(var i = 0;i<dsdvArray.length;i++){ 
 		if(dsdvArray[i][0] == "S1"){
 			for(var j =0;j<showNode.length;j++){
 				if(showNode[j]==dsdvArray[i][2]){

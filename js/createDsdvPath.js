@@ -1,6 +1,7 @@
 function createDsdvPath(){ 
 document.getElementById("SR1").disabled = false;
 document.getElementById("TL").disabled = false;
+//checkNodeTableArray();
 
 	if(sendersArray.length == 0){
 		
@@ -14,20 +15,20 @@ document.getElementById("TL").disabled = false;
 		message.value="The red arrows show how the packet has being routed." 
 		for(var i=0;i<nodeTableArray.length;i++){ 
 			if(nodeTableArray[i][0] == "S1"){ 
-				if(nodeTableArray[i][2] == "R1"){ 
+				if(nodeTableArray[i][2] == "R1" && nodeTableArray[i][1] == "R1"){ 
 					components=nodeTableArray[i];
 					dsdvArray.push(components);
 					routeDsdvPath();
 					break;
 				}
-				else{
+				else if(nodeTableArray[i][1] == "R1"){
 					components = nodeTableArray[i];
 					tempDsdvArray.push(components);	
 				}
 			}
 		}
 				
-		for(var j=0;j<tempDsdvArray.length;j++){ 
+		for(var j=0;j<tempDsdvArray.length;j++){
 			for(var k=j+1;k<tempDsdvArray.length;k++){
 				if(tempDsdvArray[j][3] > tempDsdvArray[k][3]){
 					var temp = tempDsdvArray[k];
@@ -37,48 +38,61 @@ document.getElementById("TL").disabled = false;
 			}
 		}		
 		components = tempDsdvArray[0];
-		dsdvArray.push(components);
+		dsdvArray.push(components); 
 		tempDsdvArray.splice(0,1);
-		findSourcePath(dsdvArray[0][0],dsdvArray[0][2]);
+		components = ["S1"]; 
+		confirmNode.push(components); 
+		findSourcePath(dsdvArray[0][0],dsdvArray[0][2]); 
 		
 	}
 }
 
-function findSourcePath(previousNode,nextNode){		
-	
-	for(var i=0;i<nodeTableArray.length;i++){	
-		if(nodeTableArray[i][0] == nextNode && nodeTableArray[i][2] != previousNode){	
-			if(nodeTableArray[i][2] == "R1"){
+function findSourcePath(previousNode,nextNode){
+		
+	for(var i=0;i<nodeTableArray.length;i++){
+		var count = 0;
+		
+		for(var a=0;a<confirmNode.length;a++){ 
+			if(confirmNode[a] == nodeTableArray[i][2]){
+				count++;
+			}
+		}
+
+		if(nodeTableArray[i][0] == nextNode && nodeTableArray[i][2] != previousNode && count == 0){
+			if(nodeTableArray[i][2] == "R1" && nodeTableArray[i][1] == "R1"){ 
 				components=nodeTableArray[i];
 				dsdvArray.push(components);
 				routeDsdvPath();
 				break;
 			}
-			else{
+			else if(nodeTableArray[i][1] == "R1"){
 				var tempArray = new Array();
 				components =nodeTableArray[i];
 				tempArray.push(components);	
 
-				for(var j=0;j<nodeTableArray.length;j++){
-					if(tempArray[0][0] == nodeTableArray[j][0] && tempArray[0][3] > nodeTableArray[j][3]){
+				/*for(var j=0;j<nodeTableArray.length;j++){
+					if(tempArray[0][0] == nodeTableArray[j][0] && nodeTableArray[j][1] == "R1" && tempArray[0][3] > nodeTableArray[j][3]){
 						tempArray.splice(0,tempArray.length);
 						components = nodeTableArray[j];
 						tempArray.push(components);
 					}		
-				}
+				}*/
 				
 				components=tempArray[0];
 				dsdvArray.push(components);
+				components = [tempArray[0][0]];
+				confirmNode.push(components);
+				tempArray.splice(0,tempArray.length);
 					if(dsdvArray.length > nodeTableArray.length){
-						findSourcePath2();
+						findSourcePath2(); 
 					}
 					else{
 						findSourcePath(dsdvArray[dsdvArray.length-1][0],dsdvArray[dsdvArray.length-1][2]);
 					}
 				}
-			}
-		}
-
+			}	
+	}
+	
 }
 
 function findSourcePath2(){

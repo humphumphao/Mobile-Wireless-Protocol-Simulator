@@ -98,69 +98,34 @@ function sad(){
 
 }
 
-
-/*function checkNodeTableArray(){
-var objectCount=0;
-
-	for(var i=0;i<nodeAvailable.length;i++){	alert("i = " + i);
-		for(var j=0;j<nodeTableArray.length;j++){ alert("j = " + j);
-			if(nodeAvailable[i] == nodeTableArray[j][0]){ alert("nodeAvailable[i] == nodeTableArray[j][0]");
-				for(var k=0;k<nodeTableArray.length;k++){	alert("k = " + k);
-					if(nodeTableArray[k][1] == nodeTableArray[j][1] && nodeTableArray[k][0] != nodeTableArray[j][0]){ alert("nodeTableArray[k][1] == nodeTableArray[j][1] && nodeTableArray[k][0] != nodeTableArray[j][0]");
-						components = [nodeTableArray[j][0],nodeTableArray[k][0],nodeTableArray[j][2],nodeTableArray[j][3]+nodeTableArray[k][3],nodeTableArray[j][4]+nodeTableArray[k][4],nodeTableArray[j][5],nodeTableArray[j][6],nodeTableArray[k][7],nodeTableArray[k][8]];
-						//checkNodeTableArray2(nodeTableArray[j][0],nodeTableArray[k][0],nodeTableArray[j][2],nodeTableArray[j][3]+nodeTableArray[k][3],nodeTableArray[j][4]+nodeTableArray[i][4],nodeTableArray[j][5],nodeTableArray[j][6],nodeTableArray[k][7],nodeTableArray[k][8]);
-						
-						for(var l=0;l<nodeTableArray.length;l++){ alert("l = " + i);
-							if(components==nodeTableArray[l]){ alert(components);
-								objectCount++;
-							}	
-						}
-						
-						if(objectCount==0){	alert(components);
-							nodeTableArray.push(components);
-							components=[nodeTableArray[k][0],nodeTableArray[j][0],nodeTableArray[k][2],nodeTableArray[j][3]+nodeTableArray[k][3],nodeTableArray[j][4]+nodeTableArray[k][4],nodeTableArray[k][5],nodeTableArray[k][6],nodeTableArray[k][7],nodeTableArray[k][8]];
-							nodeTableArray.push(components);
-						}
-					
-					
-					
-					}
-				}
-			}
-		}
-	}
-}*/
-
 function checkNodeTableArray(){
 
 	for(var i=0;i<nodeTableArray.length;i++){
 		for(var j=i+1;j<nodeTableArray.length;j++){
-			if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][3] == nodeTableArray[j][3]){
-				nodeTableArray.splice(j,1);
-			}
-			else if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][3] < nodeTableArray[j][3]){
-				nodeTableArray.splice(j,1);
-			}
-			else if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][3] > nodeTableArray[j][3]){
+			if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][3] > nodeTableArray[j][3] ){
 				nodeTableArray.splice(i,1);
+			}
+			else if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][3] < nodeTableArray[j][3] ){
+				nodeTableArray.splice(j,1);
 			}
 		}
 	}
-
+	checkNodeTableArray2();
+	checkNodeTableArray2();
 }
 
 function checkNodeTableArray2(){
 
 	for(var i=0;i<nodeTableArray.length;i++){
 		for(var j=i+1;j<nodeTableArray.length;j++){
-			if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][4] == nodeTableArray[j][4]){
-				nodeTableArray.splice(j,1);
+			if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][4] > nodeTableArray[j][4]){
+				nodeTableArray.splice(i,1);
 			}
 			else if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][4] < nodeTableArray[j][4]){
 				nodeTableArray.splice(j,1);
 			}
-			else if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][4] > nodeTableArray[j][4]){
-				nodeTableArray.splice(i,1);
+			else if(nodeTableArray[i][0] == nodeTableArray[j][0] && nodeTableArray[i][1] == nodeTableArray[j][1] && nodeTableArray[i][4] == nodeTableArray[j][4]){
+				nodeTableArray.splice(j,1);
 			}
 		}
 	}

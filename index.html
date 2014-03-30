@@ -45,13 +45,18 @@ var dsdvArray = new Array();
 var tableArray = new Array();
 var sourceTableArray = new Array();
 var normalTableArray = new Array();
-var randomCountArray = new Array();
 var nodeTableArray = new Array();
 var addPathArray = new Array();
 var nodeAvailable = new Array();
 var tempDsrArray = new Array();
 var tempDsdvArray = new Array();
 var timeLineNode = new Array();
+
+var dsrLine = new Array();
+var confirmNode = new Array();
+
+
+var routingTableInfo = new Array();
 
 var nodeTL = 0;
 var motionCount = 0;
@@ -65,12 +70,20 @@ context.clearRect(0, 0, 800, 550);
 
 function resetAll(){
 context.clearRect(0, 0, 800, 550);
+lineArrayS.splice(0,lineArrayS.length);
+lineArray.splice(0,lineArray.length);
 dsdvArray.splice(0,dsdvArray.length);
 tableArray.splice(0,tableArray.length);
+sourceTableArray.splice(0,sourceTableArray.length);
+normalTableArray.splice(0,normalTableArray.length);
+nodeTableArray.splice(0,nodeTableArray.length);
 addPathArray.splice(0,addPathArray.length);
+nodeAvailable.splice(0,nodeAvailable.length);
 tempDsrArray.splice(0,tempDsrArray.length);
 tempDsdvArray.splice(0,tempDsdvArray.length);
 timeLineNode.splice(0,timeLineNode.length);
+confirmNode.splice(0,confirmNode.length);
+dsrLine.splice(0,dsrLine.length);
 motionCount = 0;
 sequenceCount = 0; 
 nodeTL = 0;
@@ -93,6 +106,8 @@ nodeAvailable.splice(0,nodeAvailable.length);
 tempDsrArray.splice(0,tempDsrArray.length);
 tempDsdvArray.splice(0,tempDsdvArray.length);
 timeLineNode.splice(0,timeLineNode.length);
+confirmNode.splice(0,confirmNode.length);
+dsrLine.splice(0,dsrLine.length);
 motionCount = 0;
 sequenceCount = 0; 
 nodeTL = 0;
@@ -156,7 +171,8 @@ Select your Network Protocol:
 <select id="protocolIdentity" onchange="showProtocolIdentity()">
   <option>Select One</option>
   <option value="dsdv">Destination Sequenced Distance Vector</option>
-  <option value="dsr">Dynamic Source Routing</option>  
+  <option value="dsr">Dynamic Source Routing</option>
+  <option value="olsr">Optimized Link State Routing</option>  
 </select>
 </form>
 <tr>
@@ -169,11 +185,11 @@ Select your Network Protocol:
 <tr>
 <td align= 'middle' colspan= '4'>
 <select id="nodeIdentity" name="nodeIdentity" size = "3" >
-<option value="nodeIdentity">---- Select One ----</option>
+<option>---- Select One ----</option>
 <option value="Sender">Source Node</option>
 <option value="Normal" >Intermediate Node</option>
 <option value="Receiver" >Destination Node </option>
-</select></br>
+</select>
 </td>
 </tr>
 </br>
@@ -185,7 +201,8 @@ Select your Network Protocol:
 </td>
 <td align="right" width = "700">Node Number:
 <input type="text" id="nodeNum" name="nodeNum" style="width: 40%; padding-left:2px;" onchange="" ></td>
-<td align="middle" colspan="2"><input class="btn btn-info btn-small" type="button" id="RN1" value="Remove node" onclick="removeNode()"> <input class="btn btn-info btn-small" type="button" id="reset" value="Reset" onclick="location.reload()"></td>
+<td align="middle" colspan="2"><input class="btn btn-info btn-small" type="button" id="RN1" value="Remove node" onclick="removeNode()"> <input class="btn btn-info btn-small" type="button" id="reset" value="Reset" onclick="location.reload()">
+</td>
 </tr>
 </table>
 </br></br>
