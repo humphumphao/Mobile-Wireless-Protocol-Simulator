@@ -1,6 +1,7 @@
 function createDsrPath(){
 document.getElementById("SR1").disabled = false;
 document.getElementById("TL").disabled = false;
+checkNodeTableArray();
 
 	if(sendersArray.length == 0){
 		
@@ -48,7 +49,7 @@ function findSequencePath(previousNode,nextNode){
 
 function routeRREQPath(){
 
-	//checkDsdvArrayPath();
+	checkNodeTableArray();
 	for(var i=0;i<dsrLine.length;i++){
 		x1 = parseInt(dsrLine[i][0]);
 		y1 = parseInt(dsrLine[i][1]);

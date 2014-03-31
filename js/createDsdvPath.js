@@ -1,7 +1,7 @@
 function createDsdvPath(){ 
 document.getElementById("SR1").disabled = false;
 document.getElementById("TL").disabled = false;
-//checkNodeTableArray();
+checkNodeTableArray();
 
 	if(sendersArray.length == 0){
 		

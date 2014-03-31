@@ -35,9 +35,9 @@ function reDraw(){
 			context.textBaseline = "top";
 			context.fillText(text, normalArray[i][2]-radius/4 ,normalArray[i][3]-radius/2);
 			context.closePath();
-			
+			checkNodeTableArray();
 			compareIntermediateNode(text);
-		
+			
 		}
 	}
 	checkNodeTableArray();

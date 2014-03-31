@@ -112,6 +112,8 @@ function checkNodeTableArray(){
 	}
 	checkNodeTableArray2();
 	checkNodeTableArray2();
+	checkNodeTableArray2();
+	checkNodeTableArray2();
 }
 
 function checkNodeTableArray2(){
