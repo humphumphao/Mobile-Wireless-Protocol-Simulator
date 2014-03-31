@@ -73,7 +73,7 @@ function createNode(xCoord,yCoord,text){
 		contextTimeLine.strokeStyle = 'black'
 		contextTimeLine.lineWidth=1
 		contextTimeLine.moveTo(xCoord,yCoord+15); 
-		contextTimeLine.lineTo(xCoord,yCoord+185);
+		contextTimeLine.lineTo(xCoord,yCoord+210);
 		contextTimeLine.stroke();
 		contextTimeLine.closePath();
 	}
@@ -94,7 +94,7 @@ function createNode(xCoord,yCoord,text){
 		contextTimeLine.strokeStyle = 'black'
 		contextTimeLine.lineWidth=1
 		contextTimeLine.moveTo(xCoord,yCoord+15); 
-		contextTimeLine.lineTo(xCoord,yCoord+185);
+		contextTimeLine.lineTo(xCoord,yCoord+210);
 		contextTimeLine.stroke();
 		contextTimeLine.closePath();
 	}
@@ -115,7 +115,7 @@ function createNode(xCoord,yCoord,text){
 		contextTimeLine.strokeStyle = 'black'
 		contextTimeLine.lineWidth=1
 		contextTimeLine.moveTo(xCoord,yCoord+15); 
-		contextTimeLine.lineTo(xCoord,yCoord+185);
+		contextTimeLine.lineTo(xCoord,yCoord+210);
 		contextTimeLine.stroke();
 		contextTimeLine.closePath();
 	}
